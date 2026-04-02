@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container { font-family: sans-serif; max-width: 300px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        .form-group { display: flex; gap: 5px; margin-bottom: 15px; }
+        input { flex: 1; padding: 5px; }
+        button { cursor: pointer; padding: 5px 10px; }
+        ul { list-style: none; padding: 0; }
+        li { background: #f4f4f4; margin: 5px 0; padding: 5px; border-radius: 3px; }
+        .btn-calcular { background-color: #28a745; color: white; border: none; width: 100%; margin-top: 10px; padding: 10px; }
+        #resultado { margin-top: 15px; text-align: center; color: #333; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora de Média</h2>
+        <div class="form-group">
+            <input type="number" id="notaInput" placeholder="Digite uma nota" step="0.1" min="0" max="10">
+            <button onclick="adicionarNota()">Adicionar</button>
+        </div>
+
+        <ul id="listaNotas"></ul>
+
+        <div class="controles">
+            <button class="btn-calcular" onclick="calcularMedia()">Calcular Média Final</button>
+            <button class="btn-limpar" onclick="limparDados()">Limpar</button>
+        </div>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        let notas = [];
+        function adicionarNota() {
+            const input = document.getElementById('notaInput');
+            const valor = parseFloat(input.value);
+
+            if (!isNaN(valor) && valor >= 0 && valor <= 10) {
+                notas.push(valor);
+                atualizarInterface();
+                input.value = '';
+                input.focus();
+            } else {
+                alert("Por favor, insira uma nota válida entre 0 e 10.");
+            }
+        }
+
+        function calcularMedia() {
+            if (notas.length === 0) {
+                alert("Adicione pelo menos uma nota antes de calcular.");
+                return;
+            }
+
+            // O método reduce percorre o array e acumula os valores
+            const soma = notas.reduce((acumulador, valorAtual) => {
+                return acumulador + valorAtual;
+            }, 0);
+
+            const media = soma / notas.length;
+            
+            document.getElementById('resultado').innerHTML = `
+                <p>A média das ${notas.length} notas é: <strong>${media.toFixed(2)}</strong></p>
+            `;
+        }
+
+        function atualizarInterface() {
+            const lista = document.getElementById('listaNotas');
+            lista.innerHTML = notas.map(n => `<li>Nota: ${n}</li>`).join('');
+        }
+
+        function limparDados() {
+            notas = [];
+            document.getElementById('listaNotas').innerHTML = '';
+            document.getElementById('resultado').innerHTML = '';
+        }
+    </script>
+</body>
+</html>
