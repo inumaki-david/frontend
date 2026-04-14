@@ -17,7 +17,7 @@ Documento baseado no SIO/IEEE 29148:2018
 
 ### 1.1 Próposito
 
-Este documento descreve os requisitos do sistema **Quitando MVC**, com objetivo de: 
+Este documento descreve os requisitos do sistema **Quitanda MVC**, com objetivo de: 
 * Definir funcionalidade
 * Padronizar entendimento entre stakeholders
 * Servir como base para desenvolvimento e testes
