@@ -9,13 +9,13 @@ export class TarefaModel {
     //JS permite colocar atributos diretamente no construtor
     constructor() {
         this.tarefas = []; //cria um vetor para as tarefas
-        this.currentId =1; //contador para o id
+        this.currentId = 1; //contador para o id
     }
 
     //métodos
     
     //adicionar tarefas (create)
-    addTarefas(titulo) {
+    addTarefa(titulo) {
         const newTarefa = {
             id: this.currentId++,
             titulo: titulo,
@@ -33,7 +33,7 @@ export class TarefaModel {
     atualizarTarefa(id) {
         const tarefa = this.tarefas.find(tarefa => tarefa.id === id);
         if(tarefa){ //sea tarefa for encontrada
-            tarefa.completed = !this.tarefas.completed; //inverter o valor da booelana 
+            tarefa.completed = !tarefa.completed; //inverter o valor da booelana 
         }
     } 
     
