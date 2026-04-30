@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento Quitanda MVC</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Sistema de Gestão de Quitanda MVC</h1>
+
+    <button id="btn-tema" class="btn-tema">Mudar para Tema Claro</button>
+
+    <div class="grid-layout">
+        <!-- Seção de Cadastro -->
+        <section>
+            <h2>Cadastrar Produto / Entrada</h2>
+            <input type="text" id="p-nome" placeholder="Nome do Produto">
+            <input type="text" id="p-categoria" placeholder="Categoria">
+            <input type="number" id="p-preco" placeholder="Preço" step="0.01">
+            <input type="number" id="p-qtd" placeholder="Quantidade">
+            <button id="btn-salvar">Salvar/Atualizar</button>
+        </section>
+        <!-- Seção de Venda -->
+        <section>
+            <h2>Registrar Venda</h2>
+            <select id="v-nome">
+                <option value="">Selecione um produto</option>
+            </select>
+            <input type="number" id="v-qtd" placeholder="Quantidade">
+            <button id="btn-venda">Finalizar Venda</button>
+        </section>
+    </div>
+    <br>
+
+    <!-- Exibição de Dados -->
+    <div class="grid-layout">
+        <section>
+            <h2>Estoque Atual</h2>
+            <div id="lista-estoque"></div>
+        </section>
+
+        <section>
+            <h2>Histórico de Movimentações</h2>
+            <ul id="lista-historico"></ul>
+        </section>
+    </div>
+    <br>
+
+    <!-- Seção do Dashboard -->
+    <section id="dashboard-container">
+        <h2>Dashboard de Desempenho</h2>
+        <div id="dashboard-cards" class="dashboard-grid">
+        </div>
+    </section>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
