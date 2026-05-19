@@ -26,18 +26,16 @@ function calcularMedia(estudante: Estudante): void {
   }
 }
 
-// Cria um objeto de teste para um aluno com notas boas
-const alunoSucesso: Estudante = {
+const aluno1: Estudante = {
   nome: "Davi Martins",
   notas: [10.0, 9.5, 9.0, 8.5],
 };
 
-// Cria um objeto de teste para um aluno que precisa de ajuda
-const alunoDificuldade: Estudante = {
+const aluno2: Estudante = {
   nome: "Bruno Li",
   notas: [9.0, 9.0, 8.5, 10.0],
 };
 
 // Testa a função com os dois estudantes criados
-calcularMedia(alunoSucesso);
-calcularMedia(alunoDificuldade); 
+calcularMedia(aluno1);
+calcularMedia(aluno2); 
