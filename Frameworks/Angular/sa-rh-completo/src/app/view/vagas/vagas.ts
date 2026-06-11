@@ -20,7 +20,7 @@ export class Vagas implements OnInit {
   }
 
   //método para listar as vagas
-  listarVagas() {
+  listarVagas(): void{
     this._apiService.getVagas().subscribe((retornaVagas) => {
       this.vagas = retornaVagas.map((e) => {
         return new Vaga(e.id, e.nome, e.foto, e.descricao, e.salario);

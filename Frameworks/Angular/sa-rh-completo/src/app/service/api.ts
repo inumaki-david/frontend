@@ -33,6 +33,7 @@ export class Api {
     return this.http.put<Vaga[]>(UrlAtualizado, vaga);
   }
 
+  //delete - delete
   removerVaga(id:any) : Observable<Vaga[]> {
     //para deletar, precisa do id
     const urlDeletar = `${this.apiUrl}/${id}`;
