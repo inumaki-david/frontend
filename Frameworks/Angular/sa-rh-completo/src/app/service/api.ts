@@ -22,21 +22,17 @@ export class Api {
   }
 
   //post - create
-  cadastrarVaga(vaga: Vaga): Observable<Vaga[]> {
-    return this.http.post<Vaga[]>(this.apiUrl, vaga); // passa o link da conexão e o valor vaga
+  cadastrarVaga(vaga: Vaga): Observable<Vaga> {
+    return this.http.post<Vaga>(this.apiUrl, vaga);
   }
 
-  //put - update
-  atualizarVaga(id: any, vaga: Vaga): Observable<Vaga[]> {
-    // para atualizar precisa passar o id
-    const UrlAtualizado = `${this.apiUrl}/${id}`; // http://localhost:3000/vagas/id
-    return this.http.put<Vaga[]>(UrlAtualizado, vaga);
+  atualizarVaga(id: any, vaga: Vaga): Observable<Vaga> {
+    const UrlAtualizado = `${this.apiUrl}/${id}`;
+    return this.http.put<Vaga>(UrlAtualizado, vaga);
   }
 
-  //delete - delete
-  removerVaga(id: any): Observable<Vaga[]> {
-    // para deletar precisa passar o id
+  removerVaga(id: any): Observable<void> {
     const urlDeletar = `${this.apiUrl}/${id}`;
-    return this.http.delete<Vaga[]>(urlDeletar);
+    return this.http.delete<void>(urlDeletar);
   }
 }

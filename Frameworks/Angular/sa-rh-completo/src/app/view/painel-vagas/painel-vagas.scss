@@ -1,141 +1,147 @@
-//estilização de painel vags
-//declaração de variáveis
-$primaria: #0000ff;
-$secundaria: #999;
-$sucesso: #00ff00;
-$alerta: #ff0000;
-$aviso: #ffff00;
+@use "sass:color";
+
+$surface: #121414;
+$surface-container: #1e2020;
+$surface-container-high: #282a2b;
+$surface-bright: #38393a;
+$on-surface: #e2e2e2;
+$outline: #8b919f;
+$primary: #1275e2;
+$secondary: #f95e11;
+$muted: #c1c6d5;
 
 h2 {
   text-align: center;
-  padding: 20px;
-  color: #555;
+  padding: 1.5rem 0;
+  color: $on-surface;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem;
 }
 
 form {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba($color: #000000, $alpha: 0.1);
-
-  label {
-    display: block;
-    margin-bottom: 1rem;
-    color: #333;
-    font-size: 1rem;
-  }
-
-  input {
-    width: calc(100% - 40px);
-    padding: 1rem 10px;
-    margin-bottom: 1.5rem;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    font-size: 1rem;
-
-    &:focus {
-      // quando clicar no input
-      outline: none;
-      border-color: $primaria;
-      box-shadow: 0 4px 16px rgba($color: #000000, $alpha: 0.1);
-    }
-  }
-
-  button {
-    padding: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    margin-right: 1rem;
-
-    &[type='button']:nth-of-type(1) {
-      background-color: $secundaria;
-
-      &:hover {
-        background-color: darken($color: $sucesso, $amount: 10%);
-      }
-    }
-
-    &[type='button']:nth-of-type(2) {
-      background-color: $secundaria;
-
-      &:hover {
-        background-color: darken($color: $aviso, $amount: 10%);
-      }
-    }
-
-    &[type='button']:nth-of-type(3) {
-      background-color: $secundaria;
-
-      &:hover {
-        background-color: darken($color: $alerta, $amount: 10%);
-      }
-    }
-  }
+  border-radius: 1rem;
+  background: $surface-container;
+  border: 1px solid rgba($outline, 0.18);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
 
-// estilização da tabela
+label {
+  display: block;
+  margin-bottom: 1rem;
+  color: $on-surface;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
 
-//estilização da tabela
+input,
+textarea {
+  width: 100%;
+  padding: 1rem 1.1rem;
+  margin-top: 0.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba($outline, 0.28);
+  background: #191b1b;
+  color: $on-surface;
+  font-family: var(--font-body, 'Questrial', sans-serif);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: $primary;
+  box-shadow: 0 0 0 4px rgba($primary, 0.12);
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.95rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  font-family: var(--font-label, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button[type="submit"] {
+  background: $primary;
+  color: #000512;
+  box-shadow: 0 14px 30px rgba($primary, 0.25);
+}
+
+button[type="button"] {
+  background: rgba($on-surface, 0.08);
+  color: $on-surface;
+  border: 1px solid rgba($outline, 0.35);
+}
+
 section {
   max-width: 1300px;
-  margin: 10px auto;
+  margin: 1.5rem auto;
   padding: 1rem;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: $surface-container;
+  border-radius: 1rem;
+  border: 1px solid rgba($outline, 0.18);
   overflow-x: auto;
-
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1.5rem;
-    font-size: 0.8rem;
-
-    th {
-      padding: 12px;
-      text-align: left;
-      border-bottom: 1px solid #aaa;
-      vertical-align: middle;
-      color: #555;
-    }
-
-    thead {
-      background-color: #999;
-
-      th {
-        color: #222;
-        font-weight: bold;
-      }
-    }
-
-    tbody {
-      tr {
-        &:hover {
-          background-color: #999;
-        }
-      }
-
-      button {
-        border: none;
-        background-color: $secundaria;
-        padding: 5px;
-        cursor: pointer;
-        border-radius: 5px;
-
-        &:hover {
-          background-color: darken($color: $aviso, $amount: 10%);
-        }
-      }
-    }
-  }
 }
 
-//fim da tabela
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  padding: 1rem 1rem;
+  text-align: left;
+  color: $on-surface;
+}
+
+thead {
+  background: rgba($surface-bright, 0.07);
+}
+
+thead th {
+  font-weight: 700;
+  color: $on-surface;
+}
+
+tbody tr {
+  border-top: 1px solid rgba($outline, 0.18);
+}
+
+tbody tr:hover {
+  background: rgba($surface-bright, 0.08);
+}
+
+tbody button {
+  border: none;
+  background: $secondary;
+  color: #5a1b00;
+  padding: 0.55rem 0.85rem;
+  border-radius: 0.75rem;
+}
 
 .footer {
   height: 8vh;

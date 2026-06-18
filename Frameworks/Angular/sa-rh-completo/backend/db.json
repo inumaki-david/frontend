@@ -41,6 +41,45 @@
       "foto": "",
       "descricao": "",
       "salario": 0
+    },
+    {
+      "id": "_IFGJpf64hQ",
+      "nome": "ti",
+      "foto": "n tem",
+      "descricao": "trabalhar até morrer",
+      "salario": 101
+    }
+  ],
+  "curriculos": [
+    {
+      "nome": "João Silva",
+      "formacao": "Engenharia de Software",
+      "experiencia": "5 anos em desenvolvimento",
+      "habilidades": "Angular, Node.js, SQL",
+      "linkedin": "https://linkedin.com/in/joaosilva",
+      "resumo": "Desenvolvedor fullstack com experiência em projetos web.",
+      "usuarioId": 1,
+      "id": "1"
+    },
+    {
+      "nome": "Maria Santos",
+      "formacao": "Ciência da Computação",
+      "experiencia": "3 anos como desenvolvedora backend",
+      "habilidades": "Python, PostgreSQL, Docker",
+      "linkedin": "https://linkedin.com/in/mariasantos",
+      "resumo": "Desenvolvedora backend com expertise em sistemas escaláveis",
+      "usuarioId": 1,
+      "id": "8PLjrrv6DOY"
+    },
+    {
+      "nome": "da",
+      "formacao": "da",
+      "experiencia": "da",
+      "habilidades": "da",
+      "linkedin": "https://linkedin.com/in/joaosilva",
+      "resumo": "da",
+      "usuarioId": 1,
+      "id": "JuKGWHVdhJk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

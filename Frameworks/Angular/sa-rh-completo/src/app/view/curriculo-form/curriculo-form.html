@@ -1,0 +1,40 @@
+<section class="curriculo-form">
+  <h2>{{ isEditMode ? 'Editar currículo' : 'Novo currículo' }}</h2>
+
+  <form [formGroup]="curriculoForm" (ngSubmit)="submit()">
+    <label>
+      Nome
+      <input formControlName="nome" />
+    </label>
+
+    <label>
+      Formação
+      <input formControlName="formacao" />
+    </label>
+
+    <label>
+      Experiência
+      <textarea formControlName="experiencia"></textarea>
+    </label>
+
+    <label>
+      Habilidades
+      <input formControlName="habilidades" />
+    </label>
+
+    <label>
+      LinkedIn
+      <input formControlName="linkedin" />
+    </label>
+
+    <label>
+      Resumo profissional
+      <textarea formControlName="resumo"></textarea>
+    </label>
+
+    <div class="buttons">
+      <button type="submit" class="btn-primary">Salvar currículo</button>
+      <button type="button" class="btn-secondary" (click)="router.navigate(['/meu-curriculo'])">Cancelar</button>
+    </div>
+  </form>
+</section>

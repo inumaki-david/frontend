@@ -37,3 +37,35 @@ O sistema compreende o desenvolvimento de uma interface frontend em Angular inte
 
 ## 6. Configuração do Ambiente
 
+## 7. Como executar o projeto
+
+- Certifique-se de ter o Node.js instalado.
+- Instale as dependências do frontend:
+  ```bash
+  npm install
+  ```
+- Inicie o backend simulado com `json-server` a partir da raiz do projeto:
+  ```bash
+  json-server --watch backend/db.json --port 3007
+  ```
+- Em outro terminal, execute o frontend Angular:
+  ```bash
+  npm start
+  ```
+- Abra o navegador em `http://localhost:4200`.
+
+## 8. Rotas principais do módulo de currículos
+
+- `/curriculos` — Lista geral de currículos cadastrados.
+- `/curriculos/novo` — Formulário para cadastrar um novo currículo.
+- `/curriculos/editar/:id` — Formulário para editar um currículo existente.
+- `/curriculos/:id` — Visualização detalhada de um currículo.
+- `/meu-curriculo` — Página de visualização do currículo do usuário simulado.
+
+## 9. Observações do novo módulo
+
+- O backend simulado usa o recurso `curriculos` em `backend/db.json`.
+- A aplicação já conta com um serviço Angular para CRUD de currículos em `src/app/core/services/curriculo.service.ts`.
+- O formulário de currículo utiliza formulários reativos e validação básica de campos.
+- O módulo mantém a mesma lógica de gestão de dados já aplicada ao módulo de vagas.
+

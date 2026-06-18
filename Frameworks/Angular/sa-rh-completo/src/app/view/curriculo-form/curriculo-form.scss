@@ -1,0 +1,73 @@
+.curriculo-form {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  background: var(--surface-container);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.curriculo-form h2 {
+  margin-bottom: 1.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem;
+  color: var(--on-surface);
+}
+
+.curriculo-form label {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--on-surface-variant);
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.curriculo-form input,
+.curriculo-form textarea {
+  width: 100%;
+  padding: 1rem 1.1rem;
+  margin-top: 0.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-bright);
+  color: var(--on-surface);
+}
+
+.curriculo-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.curriculo-form .buttons {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.curriculo-form button {
+  border: none;
+  border-radius: 9999px;
+  padding: 0.95rem 1.5rem;
+  min-width: 140px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.curriculo-form button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.curriculo-form .btn-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+  box-shadow: 0 16px 32px rgba(18, 117, 226, 0.24);
+}
+
+.curriculo-form .btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--on-surface);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}

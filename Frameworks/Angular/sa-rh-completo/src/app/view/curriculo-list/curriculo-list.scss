@@ -1,0 +1,86 @@
+.curriculo-list {
+  max-width: 1120px;
+  margin: 2rem auto;
+  padding: 0 1.25rem 2.5rem;
+}
+
+.curriculo-list .actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.curriculo-list .actions button {
+  background: var(--primary);
+  color: var(--on-primary);
+  border: none;
+  border-radius: 9999px;
+  padding: 0.9rem 1.45rem;
+  font-weight: 700;
+  box-shadow: 0 18px 40px rgba(18, 117, 226, 0.2);
+}
+
+.curriculo-list .card {
+  background: var(--surface-container-high);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  border-radius: var(--radius-xl);
+  padding: 1.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.curriculo-list .card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--on-surface);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.curriculo-list .card p {
+  margin: 0.45rem 0;
+  color: var(--on-surface-variant);
+  line-height: 1.7;
+}
+
+.curriculo-list .empresa-view .actions,
+.curriculo-list .meu-curriculo button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.25rem;
+}
+
+.curriculo-list button {
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  padding: 0.75rem 1rem;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.curriculo-list button.btn-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.curriculo-list button.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--on-surface);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.curriculo-list button.btn-danger {
+  background: var(--secondary);
+  color: var(--on-secondary);
+}
+
+.curriculo-list button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+@media (max-width: 900px) {
+  .curriculo-list .empresa-view .actions,
+  .curriculo-list .meu-curriculo button {
+    flex-direction: column;
+  }
+}

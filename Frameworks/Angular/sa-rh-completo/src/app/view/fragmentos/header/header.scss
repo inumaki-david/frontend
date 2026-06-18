@@ -1,55 +1,52 @@
 .navbar {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding: 1rem 1.5rem;
-  background-color: #f8f8f8;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-xl);
+  background: var(--surface-container);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
 
-  a {
-    text-decoration: none; //remove o sublinhado do texto
-    color: #777;
-    font-weight: bold;
-  }
+.navbar a {
+  color: var(--on-surface);
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
 
-  .navItens {
-    display: flex;
-    gap: 1.5rem;
+.navbar a:hover {
+  color: var(--surface-tint);
+}
 
-    .navLinks {
-      color: #0077ff;
-      padding: 0.5rem 0;
-      transition: color 0.3s ease; //transição suave da cor
+.navbar .navItens {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
 
-      &:hover {
-        color: #0056b3;
-      }
-    }
-  }
+.navbar .navLink {
+  padding: 0.85rem 1.25rem;
+  border-radius: 9999px;
+  color: var(--on-surface);
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.2s ease, color 0.2s ease;
+}
 
-  // Media Query  => tela menor
-  @media (max-width: 800px) {
-    flex-direction: columns;
+.navbar .navLink:hover {
+  background: rgba(170, 199, 255, 0.12);
+  color: var(--surface-tint);
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
+  }
 
-    .navItens {
-      flex-direction: column;
-      width: 100%;
-      gap: 0;
-      margin-top: 1rem;
-
-      .navLink {
-        padding: 0.8rem 0;
-        border-top: 1px solid rgba(0, 0, 0, 0.05)
-      }
-
-      &:last-child {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      }
-
-    }
-
-
+  .navbar .navItens {
+    width: 100%;
   }
 }

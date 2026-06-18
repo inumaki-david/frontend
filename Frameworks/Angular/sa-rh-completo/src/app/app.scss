@@ -1,0 +1,29 @@
+.app-content {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg) calc(var(--space-xl) * 1.2);
+}
+
+.page-title {
+  margin-bottom: var(--space-xl);
+  padding: var(--space-xl);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, rgba(18, 20, 20, 0.95), rgba(51, 53, 53, 0.95));
+  border: 1px solid rgba(170, 199, 255, 0.16);
+}
+
+.page-title h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: clamp(2.4rem, 3vw, 3rem);
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+  color: var(--on-surface);
+}
+
+.page-title p {
+  font-family: 'Questrial', sans-serif;
+  color: var(--on-surface-variant);
+  font-size: 1rem;
+}

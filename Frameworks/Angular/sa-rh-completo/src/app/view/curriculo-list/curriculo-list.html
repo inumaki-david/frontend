@@ -1,0 +1,39 @@
+<section class="curriculo-list">
+  <div class="actions">
+    <button type="button" (click)="router.navigate(['/curriculos/novo'])">Novo currículo</button>
+  </div>
+
+  <div class="meu-curriculo" *ngIf="meuCurriculo; else semCurriculo">
+    <h2>Meu currículo</h2>
+    <div class="card">
+      <h3>{{ meuCurriculo.nome }}</h3>
+      <p><strong>Formação:</strong> {{ meuCurriculo.formacao }}</p>
+      <p><strong>Experiência:</strong> {{ meuCurriculo.experiencia }}</p>
+      <p><strong>Habilidades:</strong> {{ meuCurriculo.habilidades }}</p>
+      <p><strong>LinkedIn:</strong> <a [href]="meuCurriculo.linkedin" target="_blank">{{ meuCurriculo.linkedin }}</a></p>
+      <p><strong>Resumo:</strong> {{ meuCurriculo.resumo }}</p>
+      <button type="button" class="btn-primary" (click)="editCurriculo(meuCurriculo)">Editar meu currículo</button>
+    </div>
+  </div>
+
+  <ng-template #semCurriculo>
+    <div class="empty-state">
+      <p>Você ainda não possui um currículo cadastrado.</p>
+      <button type="button" (click)="router.navigate(['/curriculos/novo'])">Cadastrar currículo</button>
+    </div>
+  </ng-template>
+
+  <div class="empresa-view">
+    <h2>Currículos cadastrados</h2>
+    <div class="card" *ngFor="let curriculo of curriculos">
+      <h3>{{ curriculo.nome }}</h3>
+      <p><strong>Formação:</strong> {{ curriculo.formacao }}</p>
+      <p><strong>Experiência:</strong> {{ curriculo.experiencia }}</p>
+      <div class="actions">
+        <button type="button" class="btn-secondary" (click)="viewCurriculo(curriculo)">Ver detalhes</button>
+        <button type="button" class="btn-primary" (click)="editCurriculo(curriculo)">Editar</button>
+        <button type="button" class="btn-danger" (click)="deleteCurriculo(curriculo.id!)">Excluir</button>
+      </div>
+    </div>
+  </div>
+</section>

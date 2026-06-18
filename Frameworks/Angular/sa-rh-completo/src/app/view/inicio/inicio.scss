@@ -1,39 +1,34 @@
-// Variaveis em Scss
-$container-padding: 2rem;
-$heading-color: #333;
-$paragraph-color: #555;
-
 .container {
   max-width: 1000px;
   margin: 2rem auto;
-  padding: $container-padding;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  background: var(--surface-container);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+}
 
-  h1 {
-    color: $heading-color;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
+.container h1 {
+  color: var(--on-surface);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
 
-    @media (max-width: 800px) {
-      font-size: 2rem;
-    }
+.container p {
+  color: var(--on-surface-variant);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: center;
+}
 
-    @media (max-width: 480px) {
-      font-size: 1.5rem;
-    }
+@media (max-width: 800px) {
+  .container {
+    padding: 1.5rem;
   }
 
-  p {
-    color: $paragraph-color;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: center;
-
-    @media (max-width: 800px) {
-      font-size: 1rem;
-    }
+  .container h1 {
+    font-size: 2rem;
   }
 }

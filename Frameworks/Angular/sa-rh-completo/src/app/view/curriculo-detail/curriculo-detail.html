@@ -1,0 +1,16 @@
+<section class="curriculo-detail" *ngIf="curriculo; else loading">
+  <h2>Detalhes do currículo</h2>
+  <div class="card">
+    <h3>{{ curriculo.nome }}</h3>
+    <p><strong>Formação:</strong> {{ curriculo.formacao }}</p>
+    <p><strong>Experiência:</strong> {{ curriculo.experiencia }}</p>
+    <p><strong>Habilidades:</strong> {{ curriculo.habilidades }}</p>
+    <p><strong>LinkedIn:</strong> <a [href]="curriculo.linkedin" target="_blank">{{ curriculo.linkedin }}</a></p>
+    <p><strong>Resumo:</strong> {{ curriculo.resumo }}</p>
+    <button type="button" class="btn-primary" (click)="back()">Voltar</button>
+  </div>
+</section>
+
+<ng-template #loading>
+  <p>Carregando detalhes do currículo...</p>
+</ng-template>

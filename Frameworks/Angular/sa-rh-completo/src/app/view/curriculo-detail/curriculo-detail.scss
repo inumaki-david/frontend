@@ -1,0 +1,43 @@
+.curriculo-detail {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.curriculo-detail .card {
+  background: var(--surface-container-high);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.curriculo-detail .card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--on-surface);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.curriculo-detail .card p {
+  color: var(--on-surface-variant);
+  line-height: 1.8;
+  margin-bottom: 0.85rem;
+}
+
+.curriculo-detail button {
+  margin-top: 1.5rem;
+  padding: 0.95rem 1.45rem;
+  border: none;
+  border-radius: 9999px;
+  background: var(--primary);
+  color: var(--on-primary);
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.curriculo-detail button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
