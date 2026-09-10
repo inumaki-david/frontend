@@ -92,3 +92,4 @@ Podemos criar o Model e a Migration simultaneamente usando o Artisan:
 ```bash
 php artisan make:model Produto -m
 ```
+
