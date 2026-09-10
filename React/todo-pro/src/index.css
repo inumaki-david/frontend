@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600&family=Questrial&family=Ubuntu:wght@600;700&display=swap');
+
+body {
+  font-family: 'Questrial', sans-serif;
+  background-color: #121414; 
+  color: #e2e2e2;          
+  margin: 0;
+  padding: 16px;            
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 24px;        
+  }
+}
+
+main {
+  background: #333333;      
+  padding: 24px;
+  border-radius: 1rem;       
+  border: 1px solid #414753; 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 550px;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: 'Ubuntu', sans-serif;
+  color: #e2e2e2;
+  margin-top: 0;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #aac7ff;       
+}
+
+header p {
+  color: #c1c6d5;           
+  font-size: 14px;
+  line-height: 20px;
+}
+
+section, h2 {
+  font-size: 18px;
+  border-bottom: 2px solid #414753;
+  padding-bottom: 8px;
+  margin-top: 24px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+li {
+  background: #1e2020;       
+  border: 1px solid #414753;
+  padding: 16px;
+  border-radius: 0.5rem;     
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;               
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+li:hover {
+  background: #282a2b;       
+  border-color: #1275e2;     
+}
+
+li > div:first-child {
+  flex: 1;   
+  min-width: 0;     
+}
+
+li span {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: block;
+}
+
+.pendente {
+  font-weight: bold;
+  color: #e2e2e2;
+}
+
+.concluida span {
+  text-decoration: line-through; 
+  color: #8b919f;           
+}
+
+li .acoes-tarefa {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0; 
+}
+
+button {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  padding: 8px 16px;
+  background-color: #1275e2; 
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;     
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #005db8; 
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+li button:last-child {
+  background-color: #93000a; 
+  color: #ffdad6;
+}
+
+li button:last-child:hover {
+  background-color: #690005;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+  flex-wrap: wrap;           
+}
+
+input[type="text"] {
+  font-family: 'Questrial', sans-serif;
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 12px;
+  background-color: #121414; 
+  border: 1px solid #8b919f; 
+  border-radius: 0.5rem;     
+  color: #e2e2e2;
+  font-size: 14px;
+}
+
+input[type="text"]:focus {
+  outline: flex;
+  outline-color: #1275e2;
+  border-color: #1275e2;     
+  box-shadow: 0 0 0 2px rgba(18, 117, 226, 0.3);
+}
