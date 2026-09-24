@@ -22,3 +22,5 @@ function TarefaList({tarefas=[], aoMudarTarefa, aoRemoverTarefa}){
         </div>
     );
 }
+
+export default TarefaList;
